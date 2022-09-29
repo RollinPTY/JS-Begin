@@ -1,17 +1,20 @@
-Introducción
+Introducción 1    Introducción2  364
 
-variables 
-alert, prompt, confirm
-tipos de datos
-Conversion de tipo, Operadores básicos matemáticas, object, cocatenación, conversión numérica
+variables 14
+constante 29
+COMILLAS 60
+Boolean 77
+Object y Symbol 98
+alert, prompt, confirm 124
+Conversion de tipo 181,     Operadores básicos matemáticas 286, cocatenación 288, conversión numérica 311
 
-/* Como regla general, solo los scripts más simples se colocan en el HTML. Los más complejos residen en archivos separados. La ventaja de un archivo separado es que el navegador lo descargará y lo almacenará en caché. Otras páginas que hacen referencia al mismo script lo tomarán del caché en lugar de descargarlo, por lo que el archivo solo se descarga una vez. Eso reduce el tráfico y hace que las páginas sean más rápidas.
-*/
+Como regla general, solo los scripts más simples se colocan en el HTML. Los más complejos residen en archivos separados. La ventaja de un archivo separado es que el navegador lo descargará y lo almacenará en caché. Otras páginas que hacen referencia al mismo script lo tomarán del caché en lugar de descargarlo, por lo que el archivo solo se descarga una vez. Eso reduce el tráfico y hace que las páginas sean más rápidas.
 
 
+el JS moderno adminte "clases" y "módulo", estructuras de lenguaje avanzadas que atomáticamente habilitan "use strict" 
 
 
-VARIABLES 
+    VARIABLES 
 
 
 //let user ='Phias', age = 22, message='hola'; 
@@ -20,7 +23,6 @@ let age = 22;
 let message='hola';
 
 alert(message);
-*/
 
 // let unicamente puede incluir letrasm dígitos o $ y _ y no puede empezar con un dígito
 
@@ -29,7 +31,7 @@ alert(message);
 //const myBirthday = 01-11-2002
 // constante que no puede ser alterada
 
-/* Existe una práctica utilizada ampliamente de utilizar constantes como aliases de valores difíciles-de-recordar, "solo con valores invariables preestablecidos"
+ Existe una práctica utilizada ampliamente de utilizar constantes como aliases de valores difíciles-de-recordar, "solo con valores invariables preestablecidos"
 
 const COLOR_RED = "#F00";
 const COLOR_GREEN = "#0F0";
@@ -40,25 +42,14 @@ const COLOR_ORANGE = "#FF7F00";
 let color = COLOR_ORANGE;
 alert(color); // #FF7F00
 
-
-
 const BIRTHDAY = '18.04.1982';
 
 const age = someCode(BIRTHDAY);
-*/
+
 
 
 //----------------------------------------------------------------------------------
-/* TIPOS DE DATOS */
-/* 
-let mesaage= 'hola';
-mesaage=12345;
 
-let n = 123;
-n= 12.345;
- */
-
-//----------
 
 // operaciones= *   /   +   -
 // valores numéricos especiales= Infinity, -Infinity y NaN=es un error de cálculo y cualquier operación sobre NaN devuelve NaN
@@ -68,13 +59,8 @@ n= 12.345;
 //Para la mayoría de los propósitos es suficiente, pero a veces necesitamos números realmente grandes. Por ejemplo, para criptografía o marcas de tiempo de precisión de microsegundos.
 
 //----------
+    COMILLAS
 
-/* BigInt */
-// es para representar enteros de longitud arbitraria. y se le agrega "n" al final del entero.
-// rara vez se usa y más que todo por su compatibilidad con IE
-// const bigInt = 1234567890123456789012345678901234567890n;  // la n indica que es BigInt
-
-/* 
 let name = "John";
 
 alert( `Hola, ${name}!` ); // Hola, John!
@@ -82,47 +68,47 @@ alert( `Hola, ${name}!` ); // Hola, John!
 // esto solo se puede hacer con los brackticks (comillas invertidas)
 
 alert( `el resultado es ${1 + 2}` ); //el resultado es 3 
-*/
+
 
 // las otras comillas no tienen la capacidad de hacer esto.
 
 
 //-------
 
-/* Boolean, verdadero o falso */
-/* 
+ Boolean, verdadero o falso 
+ 
 let isGreater = 4 > 1;
 
 alert( isGreater ); // verdadero (el resultado de la comparación es "sí")
- */
+ 
 
 // nulll= nulo
 
 
-/* undefined es un valor no asignado.*/
+ undefined es un valor no asignado.
 
-/* let age;
+ let age;
 
-alert(age); // muestra "undefined" */
+alert(age); // muestra "undefined" 
 
 // pero tambien se puede asignar a una variable pero es mejor null para eso
 
 //----------------------------------------------------------------------------------
 
-/* Object y Symbol */
+ Object y Symbol 
 
 
-/* Object se utilizan para almacenar colecciones de datos y entidades más complejas. */
-
-//----------
-
-/* Symbol se utiliza para crear identificadores únicos para los objetos */
+ Object se utilizan para almacenar colecciones de datos y entidades más complejas. 
 
 //----------
 
-/* typeof duevelve el tipo de argumento. Es útil cuando queremos procesar valores de diferentes tipos de forma diferente o simplemente queremos hacer una comprobación ràpida */
+ Symbol se utiliza para crear identificadores únicos para los objetos 
 
-/* 
+//----------
+
+ typeof duevelve el tipo de argumento. Es útil cuando queremos procesar valores de diferentes tipos de forma diferente o simplemente queremos hacer una comprobación ràpida 
+
+ 
 typeof 0 // "number"
 
 typeof(0) // "number"
@@ -130,12 +116,12 @@ typeof(0) // "number"
 typeof 10n // "bigint"
 
 typeof true // "boolean"
- */
+ 
 
 
 //----------------------------------------------------------------------------------
 
-/* alert, prompt, confirm */
+ alert, prompt, confirm 
 
 // alert ya vista, muestra un mensaje al usuario hasta que presiones "Aceptar"
 //muestra una ventana modal que no deja interactuar al usuaio con lo demás hasya que preciones aceptar
@@ -145,9 +131,9 @@ typeof true // "boolean"
 //prompt  acepta dos argumentos 
 //muestra una venta nodal con un mensaje de texto, un capo de entrada para le visitante y los botones OK/CANCELAR.
 
-/* 
+ 
 result = prompt(title, [default]);
- */
+ 
 
 // title el texto a mostrar al usuario
 // default un segundo parámetro opcional, el valor inicial del campo de entrada.
@@ -157,14 +143,14 @@ result = prompt(title, [default]);
 
 // prompt retorna el texto del campo de entrada o null si la entrada fue cancelada.
 
-/* 
+ 
 let age = prompt ('¿Cuántos años tienes?', 100);
 
 alert(`Tienes ${age} años!`); //Tienes 100 años!
- */
+ 
 
 
-/* ADVERTENCIA!!! ADVERTENCIA!!!
+ ADVERTENCIA!!! ADVERTENCIA!!!
 
 El segundo parámetro es opcional, pero si no lo proporcionamos, Internet Explorer insertará el texto "undefined" en el prompt.
 
@@ -172,51 +158,48 @@ let test = prompt("Test");
 Por lo tanto, para que las indicaciones se vean bien en IE, recomendamos siempre proporcionar el segundo argumento:
 
 let test = prompt("Test", ''); // <-- para IE
-*/
+
 
 //----------
 
-/* confirm */
+ confirm 
 // confirm muestra una ventana modal con una pregunta y dos botes: ok=true y cancelar=false
-/* 
+ 
 let isBoss = confirm("¿Eres el jefe?");
 
 alert( isBoss ); // true si se pulsa OK
 
- */
+ 
 
-/* 
+ 
 let name = prompt('¿Cúal es tu nombre?)', '' )
 alert(`tu nombre es ${name}`)
 
- */
+ 
 
 
-
-linea 211
-
-/* CONVERSION DE TIPO */
+ CONVERSION DE TIPO 
 
 // hay funciones que convierte automñaticamente los valores que les pasan al tipo correcto.
 // alet convierte automáticamente cualquier valor a string para mostrarlo.
 
 //----------
 
-/* ToString */
+ ToString 
 // alert(value) para mostrar un valor como texto
-/* 
+ 
 let value = true;
 alert(typeof value); // boolean
 
 value = String(value); // ahora value es el string "true"
 alert(typeof value); // string
- */
+ 
 
 //----------
 
-/* ToNumber */
+ ToNumber 
 // las conversiones numéricas ocurren automáticamente en funciones mateámticas y expresiones
-/* 
+ 
 alert( "6" / "2") // 3, los string son convertidos a números.
 
 // para convertir explicitamente
@@ -228,45 +211,45 @@ let num = Number(str); // se convierte en 123
 
 alert(typeof num); // number
 
- */
+ 
 
 
 // la conversión explícita es requeeida usualmente cuando leemos un valor desde la fuente basada en texto, como lo son los campos de texto en los formularios, que esperamos que contengan un valor numérico. 
 // si el str no es un número valido= NaN
 
-/* 
+ 
 let age = Number("un texto arbitrario en vez de un número");
 
 alert(age); // NaN, conversión fallida
- */
+ 
 
 // REGLAS DE CONVERSIÓN
-/* 
+ 
 undefined=NaN
 null=0
 true and false= 1 y 0
 string= se eliminan los espacios del inicio y final del texto. Si el str resulta vacío, el resultado es 0
 en caso contrario el número es: "leido" del str. Un error devuelve NaN
-*/
-/* 
+
+ 
 alert( Number("   123   ") ); // 123
 alert( Number("123z") );      // NaN (error al leer un número en "z")
 alert( Number(true) );        // 1
 alert( Number(false) );       // 0
- */
+ 
 
-en concatenación de str en casi todas las operaciones matemáticas convierten valores a números, a excepción de la suma 
-/* 
+// en concatenación de str en casi todas las operaciones matemáticas convierten valores a números, a excepción de la suma 
+ 
 alert( 1 + '2' ); // '12' (string a la derecha)
 alert( '1' + 2 ); // '12' (string a la izquierda)
- */
+ 
 
 //----------
 
-/* ToBoolean */
+ ToBoolean 
 //los valores que son intuitivamente "vacíos", como 0, "", null, undefined, NaN, se convierten en false
 //otros valores se convierten en True
-/* 
+ 
 alert( Boolean(1) ); // true
 alert( Boolean(0) ); // false
 
@@ -275,20 +258,16 @@ alert( Boolean("") ); // false
 
 alert( Boolean("0") ); // true
 alert( Boolean(" ") ); // sólo espacios, también true (cualquier string no vacío es true)
- */
-
-
-
-linea 298
+ 
 
 
 //----------------------------------------------------------------------------------
 
 
 
-/* Operadores básicos, matemática */
+ Operadores básicos, matemática 
 
-/* 
+ 
 suma= +
 resta= -
 multiplicación= *
@@ -302,40 +281,38 @@ exactamente= a == b
 distinto= a != b
 igualdad estricto= === comprueba la igualdad sin conversiones de tipo
 diferencia estricta= !==
-*/
+
 
 //----------
 
-
-/* cocatenación de cadenas con el binario + */
-/* 
+ cocatenación de cadenas con el binario + 
+ 
 let s= "my" + "string";
 alert(s); // mystring
- */
+ 
 // si uno de los operados es una cadena, el otro tambien se convertira en cadena
-/* 
+ 
 alert( '1' + 2 ); // "12"
 alert( 2 + '1' ); // "21"
 alert(2 + 2 + '1' ); // "41" y no "221"
 
 alert('1' + 2 + 2); // "122", no es "14"
- */
+ 
 // Aquí el primer operando es una cadena, el compilador trata los otros dos operandos como cadenas también. El 2 es concatenado a '1', entonces es como '1' + 2 = "12" y "12" + 2 = "122".
 
 //El binario + es el único operador que soporta cadenas en esa forma. Otros operadores matemáticos trabajan solamente con números y siempre convierten sus operandos a números.
-/* 
+ 
 alert( 2 - '1' ); // 1
 alert( '6' / '2' ); // 3
- */
+ 
 
 //----------
 
-
-/* conversión numérica, unario + */
+ conversión numérica, unario + 
 //La suma + existe en dos formas: la forma binaria que utilizamos arriba y la forma unaria. La suma + existe en dos formas: la forma binaria que utilizamos arriba y la forma unaria.
 
 // Sin efecto en números
-/* 
+ 
 let x = 1;
 alert( +x ); // 1
 
@@ -345,17 +322,17 @@ alert( +y ); // -2
 // Convierte los no números
 alert( +true ); // 1
 alert( +"" );   // 0
- */
+ 
 // hace lo mismo que Number(...) pero es más corto.
-/* 
+ 
 let apples = "2";
 let oranges = "3";
 
 alert( apples + oranges ); // "23", el binario suma concatena las cadenas
- */
+ 
 
 // si queremos tratarlos como números, se convierte y luego se suma
-/* 
+ 
 let apples = "2";
 let oranges = "3";
 
@@ -364,22 +341,559 @@ alert( +apples + +oranges ); // 5
 
 // la variante más larga
 // alert( Number(apples) + Number(oranges) ); // 5
- */
+ 
 
 
- /* comparación con nulos en indefinidos */
+  comparación con nulos en indefinidos 
 // null e indefined son valores diferentes.
-/* 
+ 
 alert( null === undefined ); // false
- */
+ 
 
 // pero para  omparación no estricta 
 
-/* 
+ 
 alert( null == undefined ); // true
-*/
+
 
 // pero para otras comparaciones < > >= <=, null se convierte en 0 y undefined en NaN
 //undefined no debe compararse con otros valores.
 
 // tratar cualquier comparación con undefined/null (excepto la ifualdad estricta ===) con sumo cuidado y no usar comparaciones con estos.
+
+Introducción 2
+
+Asignacion 375
+modificar en el lugar 415, incremento/decremento 248, operadores a nivel bit 483, coma(,) 502
+condicional if (517)  ? 588 
+operadores lógicos OR(||), Y(&&) , NO(!) 669
+nullish coalescing 836
+
+//----------------------------------------------------------------------------------
+
+
+ Asignación 
+// una asignación = es un operador y tiene una pioridad muy baja en la tabla de precedencia
+
+// x = 2 * 2 + 1, los cálculos se realizan primero y luego se evalúa el =, almacenando el resultado en x
+
+ 
+let x = 2*2+1
+alert(x) // 5
+ 
+
+// todos los operadores en JS devuelven un valor, como + y -, pero también es cierto para =.
+// x=value escribe el value en x y luego lo devuelve
+
+ 
+let a = 1;
+let b = 2;
+
+let c = 3 - (a = b + 1);
+
+alert( a ); // 3
+alert( c ); // 0
+ 
+
+//----------
+
+
+ Asignacione encadenadas 
+ 
+let a, b, c;
+
+a = b = c = 2 + 2;
+
+alert( a ); // 4
+alert( b ); // 4
+alert( c ); // 4
+ 
+
+//----------------------------------------------------------------------------------
+
+
+ modificar en el lugar 
+ 
+let n = 2;
+n=n+5;
+n=n+2;
+
+//esta anotación puede ser acortada ultilizando +=
+n +=5
+ 
+
+//----------------------------------------------------------------------------------
+
+
+ Incremento/Decremento 
+// aumentar o disminuir un número en uno es una de las operaciones num más comunes
+// solo se puede utilizar con variables
+
+//incremento
+ 
+let counter = 2;
+counter++;      // funciona igual que counter = counter + 1, pero es más corto
+alert( counter ); // 3
+ 
+
+//----------
+
+
+//decremento
+ 
+let counter = 2;
+counter--;      // funciona igual que counter = counter - 1, pero es más corto
+alert( counter ); // 1
+ 
+
+ 
+let counter = 1;
+let a = ++counter; // (*)
+
+alert(a); // 2
+ 
+
+
+// puede ser usada dentro de expresiones
+
+ 
+let counter = 1;
+alert( 2 * ++counter ); // 4
+ 
+
+
+//comparado con:
+ 
+let counter = 1;
+alert( 2 * counter++ ); // 2, porque counter++ devuelve el valor "antiguo"
+ 
+
+// RECOMENDACIÓN
+// es mejor usar el estilo de una linea-una acción
+ 
+let counter = 1;
+alert( 2 * counter );
+counter++;
+ 
+
+
+//----------------------------------------------------------------------------------
+
+
+ OPERADORES A NIVEL BIT 
+
+// los operadores a nivel bit tratan a los argumentos como números enteros de 32 bits y trabajan en el niver de representacioón
+
+ 
+AND(&)
+OR(|)
+XOR(^)
+NOT(~)
+LEFT SHIFT(<<)
+RIGHT SHIFT(>>)
+ZERO-FILL RIGHT SHIFT (>>>>)
+
+
+// estos operadores se usan muy raramente, cuando necesitamos manejar la representaciñon de números en su más bajo nivel.
+
+//----------------------------------------------------------------------------------
+
+
+ Coma 
+
+// el operador coma , es uno de los operadores más inusuales. A veces, es utilizaso para escribir código más corto
+
+// permite evaluar varias expresiones, dividiendolas con una coma ,. cada una de ellas es evaluado pero solo el resltudao de la últimas es devuelto
+ 
+let a = (1 + 2, 3 + 4);
+
+alert( a ); // 7 (el resultado de 3 + 4)
+ 
+
+
+//----------------------------------------------------------------------------------
+
+
+ CONDICIONAL if, '?' 
+// if(...) evalua la condición en los paréntesis, y si el resultado es true ejecuta un bloque de código.
+
+ 
+let year = prompt('¿En que año fué publicada la especificación ECMAScript-2015?', '');
+
+if (year == 2015) alert( '¡Estás en lo cierto!' );
+ 
+
+// si queremos ejecutar más de dos sentincias hay que usar llaves
+ 
+if (year == 2015) {
+    alert( "¡Es Correcto!" );
+    alert( "¡Eres muy inteligente!" );
+}
+ 
+
+
+// if(...) evalúa la expresión y convierte el resultado en booleano.
+// RECORDAR: número =, str vacio "", null, undefined y NaN se convierten en false
+// el resto en true
+ 
+if (0) { // 0 es falso
+    ...
+}
+
+if (1) { // 1 es verdadero
+    ...
+}
+   
+
+ 
+let cond = (year == 2015); // la igualdad evalúa y devuelve un true o false
+
+if (cond) {
+  ...
+}
+ 
+
+//----------
+
+
+ LA CLÁUSULA else 
+// es un bloque opcional. se ejecutara la condición sea falsa.
+ 
+let year = prompt('¿En qué año fue publicada la especificación ECMAScript-2015?', '');
+
+if (year == 2015) {
+  alert( '¡Lo adivinaste, correcto!' );
+} else {
+  alert( '¿Cómo puedes estar tan equivocado?' ); // cualquier valor excepto 2015
+}
+
+ 
+
+// algunas veces, queremos probar variates de una condición, else if lo permite.
+ 
+let year = prompt('¿En qué año fue publicada la especificación ECMAScript-2015?', '');
+
+if (year < 2015) {
+  alert( 'Muy poco...' );
+} else if (year > 2015) {
+  alert( 'Muy Tarde' );
+} else {
+  alert( '¡Exactamente!' );
+}
+ 
+
+//----------
+
+
+ OPERADOR TERNARIO ? 
+// a veces necesitamos asignar una variable dependiendo de alguna condición
+ 
+let accessAllowed;
+let age = prompt('¿Qué edad tienes?', '');
+
+if (age > 18) {
+  accessAllowed = true;
+} else {
+  accessAllowed = false;
+}
+
+alert(accessAllowed)
+ 
+
+// EL OPERADOR TERNARIO permite ejecutar esto de forma más simple
+ 
+let result = condition ? value1 : value2;
+ 
+
+// se evalua condition: si es verdadera entonces devuelve value1, de lo contrario value2
+
+ 
+let accessAllowed = (age > 18) ? true : false;
+ 
+// se evalua condition: si es verdadera entonces devuelve value1, de lo contrario value2
+
+// IMPORTANTE, se puede evitar utilizar el operador ternario porque esta comparación devuelve directamente true/false:
+
+// es lo mismo que
+ 
+let accessAllowed = age > 18;
+ 
+
+//----------
+
+
+ Multiples ternarios 
+ 
+let age = prompt('¿edad?', 18);
+
+let message = (age < 3) ? '¡Hola, bebé!' :
+  (age < 18) ? '¡Hola!' :
+  (age < 100) ? '¡Felicidades!' :
+  '¡Qué edad tan inusual!'; // esto significaria +100
+
+alert( message );
+ 
+
+//----------
+
+// así sería con if...else
+ 
+if (age < 3) {
+    message = '¡Hola, bebé!';
+  } else if (age < 18) {
+    message = '¡Hola!';
+  } else if (age < 100) {
+    message = '¡Felicidades!';
+  } else {
+    message = '¡Qué edad tan inusual!';
+}
+ 
+
+
+let valor=  prompt('escribe un número: ')
+
+if (valor>0) {
+    alert(1)
+} else if (valor<0) {
+    alert(-1)
+}  else if (valor==0){
+    alert(0)
+} else{
+    alert('no agregaste un num')
+}
+
+
+//----------------------------------------------------------------------------------
+
+
+ OPERADORES LÓGICOS 
+// hay cuatro operadores lógicos en JS: ||=(or), &&=(y), !=(no), ??=(fusion de nulos)
+
+
+// || (or)
+// el operador or representa dos símbolos de línea vertical
+ 
+result = a || b;
+ 
+
+// or sirve para manipular solo valores booleanos. SI uno de los argumentos es true, retorna true, de lo contrario false
+ 
+alert(true || true); // true (verdadero)
+alert(false || true); // true
+alert(true || false); // true
+alert(false || false); // false (falso)
+ 
+// el resultado siempre es true excepto cuando ambos argumentos son false.
+ 
+if (1 || 0) { // Funciona como if( true || false )
+    alert("valor verdadero!");
+  }
+ 
+
+// la  mayoria de las veces or es usado en declaraciones if para probar si alguna de las condiciones dadas es true.
+ 
+let hour = 9;
+
+if (hour < 10 || hour > 18) {
+  alert( 'La oficina esta cerrada.' );
+}
+
+// o pasar dos condiciones
+  
+let hour = 12;
+let isWeekend = true;
+
+if (hour < 10 || hour > 18 || isWeekend) {
+  alert("La oficina esta cerrada."); // Es fin de semana
+}
+ 
+
+  
+result = value1 || value2 || value3;
+
+
+// devuelve el primer valor verdadero o el último si ninguno es verdadero.
+
+ 
+alert(1 || 0); // 1 (1 es un valor verdadero)
+
+alert(null || 1); // 1 (1 es el primer valor verdadero)
+alert(null || 0 || 1); // 1 (el primer valor verdadero)
+
+alert(undefined || null || 0); // 0 (todos son valores falsos, retorna el último valor)
+
+
+// elje el que tiene datos y mostrarlo (o anñonimo si no hay nada configurado)
+ 
+let firstName = "";
+let lastName = "";
+let nickName = "SuperCoder";
+
+alert( firstName || lastName || nickName || "Anonymous"); // SuperCoder
+ 
+// si todas las variables fueran falsas, aparecería "Anonymous"
+
+
+//----------
+
+ EVALUACIÓN DE CAMINO MÁS CORTO 
+// significa que || procesa sus argumentos hasta que se alcanza el primer valor verdadero, luego el valor se devuelve inmediatamente, sin tocas el otro argumento
+//La importancia de esta característica se vuelve obvia si un operando no es solo un valor, sino una expresión con un efecto secundario, como una asignación de variable o una llamada a función.
+
+ 
+true || alert("not printed");
+false || alert("printed");
+ 
+// en la primera línea el operador || detiene la evaluación inmediatamente después de ver que es verdadera. por lo que la alerta no se ejecuta
+
+
+//----------
+
+ && (and) 
+
+ 
+result= a && b;
+
+
+// retorna true si ambos son verdaderos.
+ 
+alert(true && true); // true
+alert(false && true); // false
+alert(true && false); // false
+alert(false && false); // false
+ 
+
+ 
+let hour = 12;
+let minute = 30;
+
+if (hour == 12 && minute == 30) {
+  alert("La hora es 12:30");
+}
+
+if (1 && 0) { // evaluado como true && false
+    alert( "no funcionará porque el resultado es un valor falso" );
+  }
+
+
+
+ AND && encuentra el primer valor falso 
+ 
+result = value1 && value2 && value3;
+ 
+
+// and retorna el primer valor falso o si todos los operadores son verdaderos, retorna el último
+
+ 
+// si el primer operando es un valor verdadero,
+// AND retorna el segundo operando:
+alert(1 && 0); // 0
+alert(1 && 5); // 5
+
+// si el primer operando es un valor falso,
+// AND lo retorna. El segundo operando es ignorado
+alert(null && 5); // null
+alert(0 && "cualquier valor"); // 0
+
+alert(1 && 2 && null && 3); // null
+
+
+// LA PRECEDENCIA DE AND ES MAYOR QUE LA DE OR
+// así que a && b || c && d  es basicamente lo mismo que las expresiones && estuvvieran en parentesis
+// (a && b) || (c && d)
+
+//----------
+
+ ! (NOT) 
+// solo acepta un argumento y convierte el operando a tipo booleano, luego retorna lo contrario
+
+ 
+result = !value;
+
+
+ 
+alert(!true); // false
+alert(!0); // true
+ 
+
+// un doble not a veces se usa para convertir un valor al tipo booleano
+ 
+alert(!!"cadena de texto no vacía"); // true
+alert(!!null); // false
+ 
+
+// o una manera más prolija
+ 
+alert(Boolean("cadena de texto no vacía")); // true
+alert(Boolean(null)); // false
+ 
+
+
+
+//----------------------------------------------------------------------------------
+
+
+ OPERADOR NULLISH COALESCING ?? 
+// el operador ?? (fusión de null) trata a null y a undefined de forma similar, diremos que una expresión es definida cuando no es null ni undefined
+// devuelve el primer argumento cuano este no es null ni undefined, sino devuelve el segundo
+ el resultado de a ?? b :
+// si a está definida, será a
+//si a no está definida, será b
+
+ 
+result = (a !== null && a !== undefined) ? a : b;
+ 
+
+// el uso típico de ?? es brindar un valor predeterminado
+
+
+//Por ejemplo, aquí mostramos user si su valor está “definido” (que no es null ni undefined). De otro modo, muestra Anonymous:
+
+ 
+let user;
+
+alert(user ?? "Anonymous"); // Anonymous (user no definido)
+ 
+
+//con nombre definido:
+ 
+let user = "John";
+
+alert(user ?? "Anonymous"); // John (user definido)
+ 
+
+
+// También podemos usar una secuencia de ?? para seleccionar el primer valor que no sea null/undefined de una lista.
+ 
+let firstName = null;
+let lastName = null;
+let nickName = "Supercoder";
+
+// Muestra el primer valor definido:
+alert(firstName ?? lastName ?? nickName ?? "Anonymous"); // Supercoder
+ 
+//OJITO OJITO... El operador OR || puede ser utilizado de la misma manera que ??
+ 
+let firstName = null;
+let lastName = null;
+let nickName = "Supercoder";
+
+// muestra el primer valor "verdadero":
+alert(firstName || lastName || nickName || "Anonymous"); // Supercoder
+ 
+
+// PERO LA GRAN DIFERENCIA ES: || devuelve el primer valor verdadero y ?? devuelve el primer valor definido.
+// || no distingue entre false, 0, "" y null/unefined.  Todos son los mismos valores=false. Y entonces obtrendriamos el segundo valor como resultado
+
+// pero a veces queremos usar el valor predeterminado solo si la variable es null/undefined.
+
+ 
+ejm:
+let height = 0; // altura cero
+
+alert(height || 100); // 100
+alert(height ?? 100); // 0
+ 
+
+ ADVERTENCIA: esta prohibido utilizar ?? con || y && sin paréntesis explícitos. 
+

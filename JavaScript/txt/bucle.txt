@@ -5,92 +5,87 @@ Bucles while y for
     etiquetas
 
 
-
-
-
-
-
 //----------------------------------------------------------------------------------
 
 
-/* BUCLE WHILE y FOR */
+ BUCLE WHILE y FOR 
 
-/* While */
+ While 
 // mientras la condición sea verdadera, el código del curpo del bucle será ejecutado
 
-/* 
+ 
 let i = 0;
 while (i < 3) { // muestra 0, luego 1, luego 2
   alert( i );
   i++;
 }
- */
+ 
 
 // la manera más corta de escribir while (i !=0) es while(i)
 
-/* 
+ 
 let i = 3;
 while (i) { // cuando i sea 0, la condición se volverá falsa y el bucle se detendrá
   alert( i );
   i--;
 }
-*/
+
 
 // manera corta y sin {}
-/* 
+ 
 let i = 3;
 while (i) alert(i--);
-*/
+
 
 //----------
 
-/* do...while */
+ do...while 
 // el bucle primero ejecuta el cuerpo, luego comprueba la condición, y,  mientras sea un valor verdadero, la ejecuta una y otra vez
 
-/* 
+ 
 let i = 0;
 do {
   alert( i );
   i++;
 } while (i < 3);
- */
+ 
 
 
-/* ADVERTENCIA: ESTA SINTAXIS SOLO SE USA CUANDO EL CUERPO DEL BUCLE SEA EJECUTADO AL MENOS UNA VEZ SIN IMPORTAR LA CONDICIÓN. */
+ ADVERTENCIA: ESTA SINTAXIS SOLO SE USA CUANDO EL CUERPO DEL BUCLE SEA EJECUTADO AL MENOS UNA VEZ SIN IMPORTAR LA CONDICIÓN. 
 
 
 //----------
 
 
-/* Bucle for */
-/* 
+ Bucle for 
+ 
 for (begin; condition; step) { // (comienzo, condición, paso)
   // ... cuerpo del bucle ...
 }
-*/
 
-/* 
+
+ 
 for (let i = 0; i < 3; i++) { // muestra 0, luego 1, luego 2
   alert(i);
 }
-*/
 
-/* IMPORTANTE: declar la variable en el bucle. se le llama declaraci´ln de variable en línea y son solo visibles dentro del bucle */
+
+ IMPORTANTE: declar la variable en el bucle. se le llama declaraci´ln de variable en línea y son solo visibles dentro del bucle 
 // se puede omitir el compienza, el paso o todo y hacerlo infinito
 
-/* 
+ 
   for (; i < 3; i++) { // no hay necesidad de "comenzar"
 
   for (; i < 3;) {
 
-*/
+
 
 //----------
 
 
-/* BREAk */
+ BREAk 
 // se pouede forzar la salida del bucle con break, con este código se interrumpe si el usuario no ingresa un número
-/*
+
 let sum = 0;
 
 while (true) {
@@ -103,16 +98,16 @@ while (true) {
 
 }
 alert( 'Suma: ' + sum );
-*/
+
 
 //----------
 
-/* continue */
+ continue 
 // es una versión más ligera de break. No detiene el bucle por completo. En su lugar, detiene la iteración actual y fuerza el bucle a comebzar una nueva (si la condición lo permite)
 
 // en este ejm continue se una para mostrar solo valores dispares
 
-/* 
+ 
   for (let i = 0; i < 10; i++) {
 
   // si es verdadero, saltar el resto del cuerpo
@@ -120,37 +115,37 @@ alert( 'Suma: ' + sum );
 
   alert(i); // 1, luego 3, 5, 7, 9
 }
-*/
+
 // para los valores pares i, la directiva continue deja de ejecutar el cuerpo y pasa el control a la siguiente iteración de for, así que alert solo es llamado para mostrar valores impares
 
 
 // un bucle que muestra valores impares puede verse así:
-/* for (let i = 0; i < 10; i++) {
+ for (let i = 0; i < 10; i++) {
 
   if (i % 2) {
     alert( i );
   }
 
 }
- */
+ 
 // la directiva continues ayuda a disminuir la anidación
 // desde un punto de vista técnico, esto es idéntico al ejemplo de arriba, pero como efecto secundario, crearía un nivel más de anidación y reduce la legibilidad del código
 
 // la directivas break/coninue no son permitidas a la derecha de '?'
-/* 
+ 
 if (i > 5) {
   alert(i);
 } else {
   continue;
 }
- */
+ 
 
 // (i > 5) ? alert(i) : continue; // continue no está permitida aquí
 
 // Esta es otra razón por la cual se recomienda no usar el operador de signo de interrogación ? en lugar de if
 
 // A veces necesitamos salirnos de múltiples bucles anidados al mismo tiempo.
-/* 
+ 
 for (let i = 0; i < 3; i++) {
 
   for (let j = 0; j < 3; j++) {
@@ -163,18 +158,18 @@ for (let i = 0; i < 3; i++) {
 }
 
 alert('Listo!');
- */
+ 
 
 // necesitamos una manera de detener el proceso si el usuario cancela la entrada.
 // break ordinario solo nos sacaria del bucle interno.
 
 //----------
-/* ETIQUETA */
+ ETIQUETA 
 
 
-/* SE NECESITA UNA ETIQUETA, que es un identificador con un signo de dos punto antes del bucle */
+ SE NECESITA UNA ETIQUETA, que es un identificador con un signo de dos punto antes del bucle 
 
-/* 
+ 
 outer: for (let i = 0; i < 3; i++) {
 
   for (let j = 0; j < 3; j++) {
@@ -189,18 +184,18 @@ outer: for (let i = 0; i < 3; i++) {
 }
 
 alert('Listo!');
- */
+ 
 
 // tambien se puede tener la etiqueta separada
-/* 
+ 
 outer:
 for (let i = 0; i < 3; i++) { ... }
- */
+ 
 
 // La directiva continue también puede usar usada con una etiqueta. En este caso, la ejecución del código salta a la siguiente iteración del bucle etiquetado.
 
 
-/* 
+ 
 practica
 let i = 0
 
@@ -209,4 +204,4 @@ do {
 
 } while (i<=100 && num);
 
- */
+ 
