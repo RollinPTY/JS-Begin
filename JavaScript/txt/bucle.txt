@@ -1,9 +1,10 @@
 Introducción 3
 
-Bucles while y for
-    break/continue
-    etiquetas
-
+Bucles while 12
+ for 61
+    break/continue 87
+    etiquetas 168
+switch 212
 
 //----------------------------------------------------------------------------------
 
@@ -205,3 +206,60 @@ do {
 } while (i<=100 && num);
 
  
+//----------------------------------------------------------------------------------
+
+
+SWITCH
+
+// puede reemplazar múltiples condiciones if, provee una mejor manera de comparar un valor con múltiples variantes.
+
+//construcción
+switch(x) {
+  case 'valor1':  // if (x === 'valor1')
+    ...
+    [break]
+
+  case 'valor2':  // if (x === 'valor2')
+    ...
+    [break]
+
+  default:
+    ...
+    [break]
+}
+
+
+let a = 2 + 2;
+
+switch (a) {
+  case 3:
+    alert( 'Muy pequeño' );
+    break;
+  case 4:
+    alert( '¡Exacto!' );
+    break;
+  case 5:
+    alert( 'Muy grande' );
+    break;
+  default:
+    alert( "Desconozco estos valores" );
+}
+
+// varias variantes case pueden compartir un mismo código
+
+let a = 2 + 2;
+
+switch (a) {
+  case 4:
+    alert('¡Correcto!');
+    break;
+
+  case 3:                    // (*) agrupando dos cases
+  case 5:
+    alert('¡Incorrecto!');
+    alert("¿Por qué no tomas una clase de matemáticas?");
+    break;
+
+  default:
+    alert('El resultado es extraño. Realmente.');
+}
