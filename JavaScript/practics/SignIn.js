@@ -19,7 +19,7 @@ Pista: si se le pasa una entrada vacía a un prompt, retorna una cadena de texto
 
 /* The web */
 
-/* 
+
 let userName = prompt("Quién está ahí?", "");
 
 if (userName == "Admin") {
@@ -40,12 +40,12 @@ if (userName == "Admin") {
     alert( "No te conozco" );
 }
 
- */
+ 
 
 
 /* ME */
 
-/* 
+
 
 usuario = prompt('¿Quién eres?');
 
@@ -64,6 +64,6 @@ if (usuario == 'Admin') {
   alert('no te conozco')
 }
 
-*/
+
 
 
