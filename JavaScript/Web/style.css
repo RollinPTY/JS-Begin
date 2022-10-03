@@ -14,9 +14,10 @@ body {
 }
 
 #foto{
-   margin-left: 35%;
-   padding: 10px;
-   position: relative;
+    display: block;
+    margin: 0px auto;
+    padding: 10px;
+
 
 }
 
@@ -26,5 +27,9 @@ body {
 
 
 #name {
-    color:rgb(255, 0, 0);
+    background-color: #1e1c07  ;
+    color:white;
+    width:300px;
+    text-align: center;
+    margin: 0px auto;
 }
