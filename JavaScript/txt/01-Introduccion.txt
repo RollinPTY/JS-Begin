@@ -907,9 +907,9 @@ funciones 910
 variable locales y externas 938
 parametro 965
 valores predeterminados 1000
-devolvienod un valor 1041
-nomenclatura de funcion 1092   una funcion una accion  1113
-
+devolvienod un valor 1041   nomenclatura de funcion 1092 
+una funcion una accion  1113    expresiones de funcion
+funciones callback 1182    funcion flecha 1224
 
 
 
@@ -1134,3 +1134,141 @@ function isPrime(n) {
   }
   return true;
 }
+
+
+//----------
+
+
+EXPRESIONES DE FUNCIÓN 
+
+
+// Declaración de Función:
+
+function sayHi() {
+  alert( "Hola" );
+}
+
+
+// Expresión de Función
+// permite crear una función en el medio de cualquier expresion.
+
+let sayHi = function() {
+  alert( "Hola" );
+};
+
+// no importa cómo es creada la función, es un valor
+
+function sayHi() {
+  alert( "Hola" );
+}
+
+alert( sayHi ); // muestra el código de la función
+
+// Podemos copiar una función a otra variable:
+
+function sayHi() {   // (1) crear
+  alert( "Hola" );
+}
+
+let func = sayHi;    // (2) copiar
+
+func(); // Hola          // (3) ejecuta la copia (funciona)!
+sayHi(); // Hola         // esto también funciona (por qué no lo haría)
+
+
+//----------
+
+
+FUNCIONES CALLBACK
+
+
+// funcion ask(question, yes, no)
+// (texto de la pregunta, funcion a ejcutar si la respuesta es Yes, si la repsuesta es no)
+
+function ask(question, yes, no) {
+  if (confirm(question)) yes()
+  else no();
+}
+
+function showOk() {
+  alert( "Estás de acuerdo." );
+}
+
+function showCancel() {
+  alert( "Cancelaste la ejecución." );
+}
+
+// uso: las funciones showOk, showCancel son pasadas como argumentos de ask
+ask("Estás de acuerdo?", showOk, showCancel);
+
+
+// en la vida real estas funciones se utilizan como forma para interactuar con el usuario.
+
+// una funcion equivalente y más corta:
+
+function ask(question, yes, no) {
+  if (confirm(question)) yes()
+  else no();
+}
+
+ask(
+  "Estás de acuerdo?",
+  function() { alert("Estás de acuerdo"); },
+  function() { alert("Cancelaste la ejecución."); }
+);
+
+
+//----------
+
+
+FUNCIONES FLECHA
+
+// es muy simple y concisa
+// let func = (arg1, arg2, ..., argN) => expression;
+
+// ejemplo
+
+let sum = (a, b) => a + b;
+
+/* Esta función de flecha es una forma más corta de:
+
+let sum = function(a, b) {
+  return a + b;
+};
+*/
+
+alert( sum(1, 2) ); // 3
+
+// si solo tiene un argumento
+
+let double = n => n * 2;
+// Más o menos lo mismo que: let double = function(n) { return n * 2 }
+
+alert( double(3) ); // 6
+
+// si no hay parametro los parentesis estaran vacios
+let sayHi = () => alert("¡Hola!");
+
+
+// crear una funcion dinámicamente
+
+let age = prompt("What is your age?", 18);
+
+let welcome = (age < 18) ?
+  () => alert('¡Hola!') :
+  () => alert("¡Saludos!");
+
+welcome();
+
+// funcion flecha ejemplo
+let ask = (question, yes, no) => {
+    if (confirm(question)) yes() 
+    else no();
+}
+
+
+ask(
+    "Do you agree?",
+    () => {alert("You agreed")},
+    () => {alert("You canceled the execution")}
+)
