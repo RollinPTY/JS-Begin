@@ -1,0 +1,30 @@
+body {
+    background-color: rgba(210, 238, 228, 0.936);
+}
+
+#title {
+    background-color: blanchedalmond;
+    width: 50%;
+    text-align: center;
+    border-radius: 4px;
+    word-spacing: 8px;
+    margin:auto ;
+    padding: 10px;
+    
+}
+
+#foto{
+   margin-left: 35%;
+   padding: 10px;
+   position: relative;
+
+}
+
+#foto:hover{
+    opacity: 0.7;
+}
+
+
+#name {
+    color:rgb(255, 0, 0);
+}
