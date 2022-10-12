@@ -1,4 +1,4 @@
-Introducción 1    Introducción2  364    Introducción 3 904
+Introducción 1    Introducción2  364    Introducción 3 904   Introducción 4
 
 variables 14
 constante 29
@@ -48,7 +48,7 @@ const age = someCode(BIRTHDAY);
 
 
 
-//----------------------------------------------------------------------------------
+//----------
 
 
 // operaciones= *   /   +   -
@@ -93,7 +93,7 @@ alert(age); // muestra "undefined"
 
 // pero tambien se puede asignar a una variable pero es mejor null para eso
 
-//----------------------------------------------------------------------------------
+//----------
 
  Object y Symbol 
 
@@ -119,7 +119,7 @@ typeof true // "boolean"
  
 
 
-//----------------------------------------------------------------------------------
+//----------
 
  alert, prompt, confirm 
 
@@ -261,7 +261,7 @@ alert( Boolean(" ") ); // sólo espacios, también true (cualquier string no vac
  
 
 
-//----------------------------------------------------------------------------------
+//----------
 
 
 
@@ -409,7 +409,7 @@ alert( b ); // 4
 alert( c ); // 4
  
 
-//----------------------------------------------------------------------------------
+//----------
 
 
  modificar en el lugar 
@@ -422,7 +422,7 @@ n=n+2;
 n +=5
  
 
-//----------------------------------------------------------------------------------
+//----------
 
 
  Incremento/Decremento 
@@ -496,7 +496,7 @@ ZERO-FILL RIGHT SHIFT (>>>>)
 
 // estos operadores se usan muy raramente, cuando necesitamos manejar la representaciñon de números en su más bajo nivel.
 
-//----------------------------------------------------------------------------------
+//----------
 
 
  Coma 
@@ -511,7 +511,7 @@ alert( a ); // 7 (el resultado de 3 + 4)
  
 
 
-//----------------------------------------------------------------------------------
+//----------
 
 
  CONDICIONAL if, '?' 
@@ -663,7 +663,7 @@ if (valor>0) {
 }
 
 
-//----------------------------------------------------------------------------------
+//----------
 
 
  OPERADORES LÓGICOS 
@@ -830,7 +830,7 @@ alert(Boolean(null)); // false
 
 
 
-//----------------------------------------------------------------------------------
+//----------
 
 
  OPERADOR NULLISH COALESCING ?? 
@@ -1272,3 +1272,21 @@ ask(
     () => {alert("You agreed")},
     () => {alert("You canceled the execution")}
 )
+
+
+//----------------------------------------------------------------------------------
+
+
+Introducción 4
+
+
+
+
+
+
+
+
+
+...
+
+
